@@ -54,6 +54,7 @@ public class FXMLDocumentController implements Initializable {
     @FXML
     private void goVerloren(ActionEvent event) throws IOException {
         //Voorbeeld om naar Borderpane scherm te gaan
+	//test
         AnchorPane pane = FXMLLoader.load(getClass().getClassLoader().getResource("ezfinder2/verloren.fxml"));
         APBegin.getChildren().setAll(pane);
     }
