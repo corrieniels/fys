@@ -1,0 +1,10 @@
+.BorderPane{
+    -fx-background-image: url("../Afbeeldingen/koffer-london4.jpg");
+    -fx-background-repeat: stretch;   
+    -fx-background-size:cover;
+    -fx-background-position: center center;
+     
+}
+.login_btn{
+    
+}
