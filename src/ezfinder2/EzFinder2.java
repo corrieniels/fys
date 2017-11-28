@@ -29,7 +29,7 @@ public class EzFinder2 extends Application {
         stage.setScene(scene1);
         stage.show();
 
-	// test
+	// test deniz
     }
     
     /**
