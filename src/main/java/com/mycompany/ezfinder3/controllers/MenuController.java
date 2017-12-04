@@ -8,7 +8,6 @@ import java.util.ResourceBundle;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.layout.AnchorPane;
 
 public class MenuController implements Initializable {
@@ -25,7 +24,7 @@ public class MenuController implements Initializable {
     private void goLogin(ActionEvent event) throws IOException {
         User.setUserID(0);
         MainApp.switchScherm("fxml/login.fxml");
-        MainApp.setMenu(true);
+        MainApp.setMenu(false);
     }
     
     @FXML

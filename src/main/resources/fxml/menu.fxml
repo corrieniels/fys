@@ -36,7 +36,7 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" />
             </rowConstraints>
             <children>
-                <Button fx:id="loguit" mnemonicParsing="false" onAction="#goLogin" prefHeight="25.0" prefWidth="100.0" styleClass="button" text="Uitloggen" GridPane.columnIndex="4" GridPane.halignment="RIGHT" />
+                <Button fx:id="loguit" mnemonicParsing="false" onAction="#goLogin" prefHeight="25.0" prefWidth="100.0" text="Uitloggen" GridPane.columnIndex="4" GridPane.halignment="RIGHT" />
                 <Button fx:id="management" mnemonicParsing="false" onAction="#goManagement" prefHeight="30.0" prefWidth="102.0" text="Management" GridPane.columnIndex="4" GridPane.rowIndex="2" />
                 <Button fx:id="rapportage" mnemonicParsing="false" onAction="#goRapportage" prefHeight="30.0" prefWidth="100.0" text="Rapportages" GridPane.columnIndex="3" GridPane.rowIndex="2" />
                 <Button fx:id="verloren" mnemonicParsing="false" onAction="#goVerloren" prefHeight="68.0" prefWidth="105.0" text="Verloren bagage" GridPane.columnIndex="2" GridPane.rowIndex="2" />
