@@ -1,3 +1,7 @@
+.button{
+    -fx-font-size: 12px;
+}
+
 .BorderPane{
     -fx-background-image: url("../afbeeldingen/koffer-london4.jpg");
     -fx-background-repeat: stretch;   

@@ -29,7 +29,7 @@ public class MainApp extends Application {
         parentWindow = stage;
 
         borderPane = new BorderPane();
-
+        
         switchScherm("fxml/login.fxml");
         
         Scene scene1 = new Scene(borderPane);
