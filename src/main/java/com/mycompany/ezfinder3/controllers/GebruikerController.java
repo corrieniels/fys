@@ -25,21 +25,54 @@ public class GebruikerController implements Initializable {
     @FXML Label message;
     
     private MyJDBC db;
+    private ResultSet resultSet;
     
     @FXML
     private void goManagement(ActionEvent event) throws IOException, SQLException {
         
+        // vraag gegevens op uit formulier
         String user = gebruikersnaam.getText();
         String pass = wachtwoord.getText();
         String role = type.getSelectionModel().getSelectedItem().toString();
         String lang = taal.getSelectionModel().getSelectedItem().toString();
         
-        System.out.println(user+" - "+pass+" - "+role+" - "+lang);
+        // controleer of gebruikersnaam al bestaat 
+        resultSet = db.executeResultSetQuery("SELECT * FROM medewerker WHERE gebruikersnaam = '"+user+"'");
         
-        MyJDBC db = new MyJDBC();
-//        db.executeUpdateQuery("INSERT INTO medewerker (gebruikersnaam, wachtwoord, taal, rol_id, actief) VALUES (`"+user+"`,`"+pass+"`,`"+role+"`,`"+lang+"`,`1`)");
+        int records = 0;
+        while ( resultSet.next() ){
+            records++;
+        }
         
-        MainApp.switchScherm("fxml/management.fxml");
+        // als gebruikersnaam nog niet bestaat
+        if (records == 0) {
+        
+            // vraag rol-id op
+            resultSet = db.executeResultSetQuery("SELECT id FROM rol WHERE naam = '"+role+"'");
+
+            int roleid = 0;
+            while ( resultSet.next() ){
+                roleid = resultSet.getInt("id");
+            }
+
+            // vraag taal-id op
+            resultSet = db.executeResultSetQuery("SELECT id FROM taal WHERE naam = '"+lang+"'");
+
+            int langid = 0;
+            while ( resultSet.next() ){
+                langid = resultSet.getInt("id");
+            }
+
+            // voer gebruiker in in database
+            db.executeUpdateQuery("INSERT INTO `medewerker` (`gebruikersnaam`, `wachtwoord`, `taal`, `rol_id`, `actief`) VALUES ('"+user+"','"+pass+"','"+roleid+"','"+langid+"','1')");
+
+            // ga naar management scherm
+            MainApp.switchScherm("fxml/management.fxml");
+        
+        }else{
+            message.setText("Gebruikersnaam bestaat al");
+        }
+        
     }
     
     @Override
@@ -48,7 +81,8 @@ public class GebruikerController implements Initializable {
         db = new MyJDBC();
         try {
             
-            ResultSet resultSet = db.executeResultSetQuery("SELECT * FROM taal");
+            // vul taal combobox
+            resultSet = db.executeResultSetQuery("SELECT * FROM taal");
             
             while ( resultSet.next() ){
                 taal.getItems().addAll(
@@ -56,6 +90,7 @@ public class GebruikerController implements Initializable {
                 );
             }
             
+            // vul rol combobox
             resultSet = db.executeResultSetQuery("SELECT * FROM rol");
             
             while ( resultSet.next() ){
