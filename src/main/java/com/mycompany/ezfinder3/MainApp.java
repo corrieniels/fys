@@ -18,7 +18,7 @@ public class MainApp extends Application {
    
     public static Stage parentWindow;
     private static BorderPane borderPane;
-    public static User user;
+    public static User user;    
     
     @Override
     public void start(Stage stage) throws Exception {

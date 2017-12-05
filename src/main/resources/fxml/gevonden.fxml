@@ -29,7 +29,7 @@
         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
     </rowConstraints>
     <children>
-        <Button maxWidth="200.0" minWidth="200.0" mnemonicParsing="false" prefWidth="200.0" text="Verzenden" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6">
+        <Button onAction="#verder" maxWidth="200.0" minWidth="200.0" mnemonicParsing="false" prefWidth="200.0" text="Verzenden" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="6">
             <GridPane.margin>
                 <Insets />
             </GridPane.margin>

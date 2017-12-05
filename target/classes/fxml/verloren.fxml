@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.text.Text?>
 
-<GridPane prefHeight="500.0" prefWidth="900.0" BorderPane.alignment="CENTER">
+<GridPane prefHeight="500.0" prefWidth="900.0" BorderPane.alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.ezfinder3.controllers.VerlorenController">
     <columnConstraints>
         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" />
@@ -28,7 +28,7 @@
         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
     </rowConstraints>
     <children>
-        <Button mnemonicParsing="false" text="Verzenden" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
+        <Button onAction="#verder" mnemonicParsing="false" text="Verzenden" GridPane.columnSpan="2147483647" GridPane.halignment="CENTER" GridPane.rowIndex="6" GridPane.valignment="CENTER">
             <GridPane.margin>
                 <Insets left="35.0" />
             </GridPane.margin>
