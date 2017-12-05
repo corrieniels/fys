@@ -1,6 +1,5 @@
 package com.mycompany.ezfinder3.controllers;
 
-import com.mycompany.ezfinder3.Language;
 import com.mycompany.ezfinder3.MainApp;
 import com.mycompany.ezfinder3.MyJDBC;
 import java.io.IOException;
