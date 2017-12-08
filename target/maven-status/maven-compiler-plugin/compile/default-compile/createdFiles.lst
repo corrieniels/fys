@@ -7,6 +7,7 @@ com\mycompany\ezfinder3\controllers\GevondenController.class
 com\mycompany\ezfinder3\User.class
 com\mycompany\ezfinder3\controllers\HomeController.class
 com\mycompany\ezfinder3\controllers\RapportagesController.class
+com\mycompany\ezfinder3\Home.class
 com\mycompany\ezfinder3\controllers\MatchesVerlorenController.class
 com\mycompany\ezfinder3\controllers\GebruikerController.class
 com\mycompany\ezfinder3\controllers\MenuController.class
