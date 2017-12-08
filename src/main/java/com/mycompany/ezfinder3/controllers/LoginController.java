@@ -17,6 +17,8 @@ import javafx.scene.control.PasswordField;
 
 public class LoginController implements Initializable {
     
+    private MyJDBC db;
+    
     @FXML TextField gebruikersnaam;
     @FXML PasswordField wachtwoord;
     @FXML Label message;
@@ -27,7 +29,6 @@ public class LoginController implements Initializable {
         String user = gebruikersnaam.getText();
         String pass = wachtwoord.getText();
         
-        MyJDBC db = new MyJDBC();
         ResultSet resultSet = db.executeResultSetQuery("SELECT * FROM medewerker WHERE gebruikersnaam = '"+user+"' AND wachtwoord = '"+pass+"'");
         
         int id = 0;
@@ -51,6 +52,6 @@ public class LoginController implements Initializable {
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-        // TODO
+        db = new MyJDBC();
     }
 }

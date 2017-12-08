@@ -27,19 +27,11 @@
         <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
     </rowConstraints>
     <children>
-        <Button maxWidth="200.0" minWidth="200.0" mnemonicParsing="false" onAction="#goManagement" prefWidth="200.0" text="Verzenden" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5">
-            <GridPane.margin>
-                <Insets />
-            </GridPane.margin>
-        </Button>
-        <TextField fx:id="gebruikersnaam" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="Gebruikersnaam" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
-            <GridPane.margin>
-                <Insets />
-            </GridPane.margin>
-        </TextField>
-        <TextField fx:id="wachtwoord" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="Wachtwoord" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-        <ComboBox fx:id="type" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" promptText="Type" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
-        <ComboBox fx:id="taal" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" promptText="Taal" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+        <Button onAction="#goManagement" text="Verzenden" maxWidth="200.0" minWidth="200.0" mnemonicParsing="false" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5"></Button>
+        <TextField fx:id="gebruikersnaam" text="Gebruikersnaam" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1" />
+        <TextField fx:id="wachtwoord" text="Wachtwoord" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+        <ComboBox fx:id="type" promptText="Type" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+        <ComboBox fx:id="taal" promptText="Taal" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
         <Label fx:id="message" alignment="CENTER" prefHeight="17.0" prefWidth="312.0" textAlignment="CENTER" textFill="RED" GridPane.columnIndex="1" GridPane.rowIndex="6" />
     </children>
 </GridPane>
