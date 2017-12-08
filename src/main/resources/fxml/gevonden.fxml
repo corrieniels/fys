@@ -34,14 +34,14 @@
                 <Insets />
             </GridPane.margin>
         </Button>
-        <TextField maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="Nummer" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
+        <TextField fx:id="nummer" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="Nummer" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="1">
             <GridPane.margin>
                 <Insets />
             </GridPane.margin>
         </TextField>
-        <TextField maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="Bijzonderheden" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
-        <ComboBox maxWidth="200.0" minWidth="200.0" prefWidth="200.0" promptText="Kleur" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
-        <ComboBox maxWidth="200.0" minWidth="200.0" prefWidth="200.0" promptText="Vliegveld" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
+        <TextField fx:id="bijzonderheden" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="Bijzonderheden" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="5" />
+        <ComboBox fx:id="kleur" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" promptText="Kleur" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" />
+        <ComboBox fx:id="vliegveld" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" promptText="Vliegveld" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
         <Button maxWidth="200.0" minWidth="200.0" mnemonicParsing="false" prefWidth="200.0" text="Foto" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
     </children>
 </GridPane>
