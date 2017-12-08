@@ -25,25 +25,46 @@ public class GevondenController implements Initializable {
     private ResultSet resultSet;
     
     @FXML 
-    private void verder(ActionEvent event) throws IOException {
-//        MainApp.switchScherm("fxml/matches_gevonden.fxml");
+    private void verder(ActionEvent event) throws IOException, SQLException {
+  
+      
+   
+        
         String bijzonder = bijzonderheden.getText();
-        System.out.println(bijzonder);
-        
-        
         String num = nummer.getText();
-        System.out.println(num);
-        
         String color = kleur.getSelectionModel().getSelectedItem().toString();
-        System.out.println(color);
+        String vlieg = vliegveld.getSelectionModel().getSelectedItem().toString();
+
+        resultSet = db.executeResultSetQuery("SELECT id FROM vliegveld WHERE naam = '"+vlieg+"'");
+
+        int vliegId = 0;
+        while ( resultSet.next() ){
+            vliegId = resultSet.getInt("id");
+        }
+            
+            
+             resultSet = db.executeResultSetQuery("SELECT id FROM vliegveld WHERE naam = '"+color+"'");
+
+        int colorId = 0;
+        while ( resultSet.next() ){
+            colorId = resultSet.getInt("id");
+        }
+                
+        db.executeUpdateQuery("INSERT INTO `bagage` (`bagagenummer`, `vliegveld_id`, `kleur`, `foto`, `kosten`, `bijzonder`, `klant_id`) VALUES ('"+num+"', '"+vliegId+"', '"+colorId+"', '', '0', '"+bijzonder+"', '0')");
+
+          MainApp.switchScherm("fxml/matches_gevonden.fxml");
         
     }
     
+        
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         
         db = new MyJDBC();
         
+        
+        
+    
         try {
             
             resultSet = db.executeResultSetQuery("SELECT * FROM vliegveld");
@@ -67,4 +88,5 @@ public class GevondenController implements Initializable {
         }
         
     }
-}
+    }
+
