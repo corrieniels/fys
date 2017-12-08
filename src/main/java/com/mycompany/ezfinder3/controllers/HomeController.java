@@ -52,7 +52,6 @@ public class HomeController implements Initializable {
                     );
 
             while (resultSet.next()) {
-                // get string from db, whichever way
                 data.add(new Home(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3), resultSet.getString(4), resultSet.getString(5), resultSet.getString(6), resultSet.getString(7)));
 
             }
