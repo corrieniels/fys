@@ -66,7 +66,7 @@ public class GebruikerController implements Initializable {
             // voer gebruiker in in database
             db.executeUpdateQuery("INSERT INTO `medewerker` (`gebruikersnaam`, `wachtwoord`, `taal`, `rol_id`, `actief`) VALUES ('"+user+"','"+pass+"','"+roleid+"','"+langid+"','1')");
 
-            // ga naar management scherm
+            // ga naar managementscherm
             MainApp.switchScherm("fxml/management.fxml");
         
         }else{

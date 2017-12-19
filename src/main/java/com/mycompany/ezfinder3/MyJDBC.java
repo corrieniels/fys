@@ -12,7 +12,11 @@ public class MyJDBC {
     private static final String DB_DEFAULT_DATABASE = "fys";
     private static final String DB_DEFAULT_SERVER_URL = "localhost";
     private static final String DB_DEFAULT_ACCOUNT = "root";
+<<<<<<< HEAD
     private static final String DB_DEFAULT_PASSWORD = "Bouajoen33?!";
+=======
+    private static final String DB_DEFAULT_PASSWORD = "";
+>>>>>>> 1a0be18e5b50a9a1447b3bb384fd5ea8c507e904
     
     private final static String DB_DRIVER_URL = "com.mysql.jdbc.Driver";
     private final static String DB_DRIVER_PREFIX = "jdbc:mysql://";
