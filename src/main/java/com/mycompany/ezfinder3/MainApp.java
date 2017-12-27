@@ -1,6 +1,5 @@
 package com.mycompany.ezfinder3;
 
-import com.mycompany.ezfinder3.controllers.MenuController;
 import java.io.IOException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -19,7 +18,8 @@ public class MainApp extends Application {
    
     public static Stage parentWindow;
     private static BorderPane borderPane;
-    public static User user;
+    public static User user;    
+    public static MyJDBC db;
     
     @Override
     public void start(Stage stage) throws Exception {
@@ -29,13 +29,16 @@ public class MainApp extends Application {
         parentWindow = stage;
 
         borderPane = new BorderPane();
-
+        borderPane.setStyle("root");
+        
         switchScherm("fxml/login.fxml");
         
         Scene scene1 = new Scene(borderPane);
+        scene1.getStylesheets().add("styles/style.css");
 
         stage.setScene(scene1);
         stage.show();
+        
     }
     
     /**

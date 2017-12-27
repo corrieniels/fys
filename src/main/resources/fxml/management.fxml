@@ -38,7 +38,7 @@
             <children>
                 <TextField promptText="Gebruikers zoeken" GridPane.rowIndex="2" />
                 <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="124.0" text="Zoeken" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="177.0" text="Gebruikers toevoegen" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <Button onAction="#goGebruiker" mnemonicParsing="false" prefHeight="31.0" prefWidth="177.0" text="Gebruikers toevoegen" GridPane.columnIndex="2" GridPane.rowIndex="2" />
             </children>
         </GridPane>
         <TableView editable="true" prefHeight="167.0" prefWidth="447.0" GridPane.columnIndex="1" GridPane.rowIndex="1">

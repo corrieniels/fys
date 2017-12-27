@@ -4,15 +4,12 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane prefHeight="454.0" prefWidth="900.0" BorderPane.alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.ezfinder3.controllers.HomeController">
+<GridPane prefHeight="454.0" prefWidth="900.0" BorderPane.alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="com.mycompany.ezfinder3.controllers.HomeController">
     <columnConstraints>
         <ColumnConstraints hgrow="SOMETIMES" maxWidth="308.0" minWidth="10.0" prefWidth="147.0" />
         <ColumnConstraints hgrow="SOMETIMES" maxWidth="696.0" minWidth="10.0" prefWidth="557.0" />
@@ -24,15 +21,15 @@
         <RowConstraints maxHeight="354.0" minHeight="10.0" prefHeight="109.0" vgrow="SOMETIMES" />
     </rowConstraints>
     <children>
-        <TableView prefHeight="211.0" prefWidth="557.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <TableView fx:id="verlorenBagage" prefHeight="211.0" prefWidth="557.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
             <columns>
-                <TableColumn prefWidth="75.0" text="Nummer" />
-                <TableColumn prefWidth="75.0" text="Kleur" />
-                <TableColumn prefWidth="75.0" text="Bijzonder" />
-                <TableColumn prefWidth="75.0" text="Naam" />
-                <TableColumn prefWidth="75.0" text="Email" />
-                <TableColumn prefWidth="112.0" text="Telefoonnummer" />
-                <TableColumn prefWidth="71.0" text="Status" />
+                <TableColumn fx:id="kolomNummer" prefWidth="75.0" text="Nummer" />
+                <TableColumn fx:id="kolomKleur" prefWidth="75.0" text="Kleur" />
+                <TableColumn fx:id="kolomBijzonder" prefWidth="75.0" text="Bijzonder" />
+                <TableColumn fx:id="kolomNaam" prefWidth="75.0" text="Naam" />
+                <TableColumn fx:id="kolomEmail" prefWidth="75.0" text="Email" />
+                <TableColumn fx:id="kolomTelefoonnummer" prefWidth="112.0" text="Telefoonnummer" />
+                <TableColumn fx:id="kolomStatus" prefWidth="71.0" text="Status" />
             </columns>
         </TableView>
         <GridPane GridPane.columnIndex="1">
@@ -50,4 +47,3 @@
         </GridPane>
     </children>
 </GridPane>
-
