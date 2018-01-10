@@ -51,8 +51,8 @@
                     </GridPane.margin>
                 </RadioButton>
             <ComboBox fx:id="vliegveld" prefWidth="150.0" promptText="Vliegveld(en)" GridPane.rowIndex="4" />
-            <ComboBox fx:id="jaar" prefWidth="150.0" promptText="Per jaar" GridPane.rowIndex="5" />
-            <ComboBox prefWidth="150.0" promptText="2017" GridPane.rowIndex="6" />
+            <ComboBox fx:id="categorie" prefWidth="150.0" promptText="Per jaar" GridPane.rowIndex="5" />
+            <ComboBox fx:id="jaar" prefWidth="150.0" promptText="2017" GridPane.rowIndex="6" />
             </children>
         </GridPane>
         <TabPane prefHeight="200.0" prefWidth="200.0" tabClosingPolicy="UNAVAILABLE" GridPane.columnIndex="1" GridPane.rowIndex="1">

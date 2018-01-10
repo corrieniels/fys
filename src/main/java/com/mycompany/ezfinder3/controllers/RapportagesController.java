@@ -27,14 +27,14 @@ public class RapportagesController implements Initializable {
     @FXML
     AnchorPane kosten;
     @FXML
+    ComboBox categorie;
+    @FXML
     ComboBox jaar;
-
+    
     private MyJDBC db;
     private ResultSet resultSet;
 
     private void loadData() {
-
-        db = new MyJDBC();
 
         gevonden_koffers.getChildren().clear();
         CategoryAxis xAxis = new CategoryAxis();
@@ -47,6 +47,7 @@ public class RapportagesController implements Initializable {
         series.setName("Aantal");
         test.getData().add(series);
         gevonden_koffers.getChildren().add(test);
+
     }
 
     private void LoadData() {
@@ -98,7 +99,16 @@ public class RapportagesController implements Initializable {
                 );
             }
 
-            // vul jaar combobox
+            // vul categorie combobox
+            resultSet = db.executeResultSetQuery("SELECT * FROM vliegveld");
+
+            while (resultSet.next()) {
+                categorie.getItems().addAll(
+                        resultSet.getString("jaar")
+                );
+            }
+            
+            //vul jaar combobox
             resultSet = db.executeResultSetQuery("SELECT * FROM vliegveld");
 
             while (resultSet.next()) {
@@ -106,7 +116,7 @@ public class RapportagesController implements Initializable {
                         resultSet.getString("jaar")
                 );
             }
-
+            
         } catch (SQLException ex) {
             Logger.getLogger(GebruikerController.class.getName()).log(Level.SEVERE, null, ex);
         }
