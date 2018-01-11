@@ -30,62 +30,34 @@ public class RapportagesController implements Initializable {
     ComboBox categorie;
     @FXML
     ComboBox jaar;
-    
+
     private MyJDBC db;
     private ResultSet resultSet;
 
-    private void loadData() {
+    private void loadData(AnchorPane ap, String titel) {
 
-        gevonden_koffers.getChildren().clear();
+        ap.getChildren().clear();
         CategoryAxis xAxis = new CategoryAxis();
         xAxis.setLabel("Maanden");
         NumberAxis yAxis = new NumberAxis();
         yAxis.setLabel("Aantal");
-        BarChart test = new BarChart(xAxis, yAxis);
-        test.setTitle("Gevonden koffers");
+        BarChart bc = new BarChart(xAxis, yAxis);
+        bc.setTitle(titel);
         XYChart.Series series = new XYChart.Series();
-        series.setName("Aantal");
-        test.getData().add(series);
-        gevonden_koffers.getChildren().add(test);
+        series.setName("2003");
+        series.getData().add(new XYChart.Data("bc", 25601.34));
+        series.getData().add(new XYChart.Data("bc2", 201.34));
+        bc.getData().add(series);
+        ap.getChildren().add(bc);
 
     }
 
-    private void LoadData() {
-
-        gematchte_koffers.getChildren().clear();
-        CategoryAxis xAxis = new CategoryAxis();
-        xAxis.setLabel("Maanden");
-        NumberAxis yAxis = new NumberAxis();
-        yAxis.setLabel("Aantal");
-        BarChart test2 = new BarChart(xAxis, yAxis);
-        test2.setTitle("Gemachte koffers");
-        XYChart.Series series1 = new XYChart.Series();
-        series1.setName("Aantal");
-        test2.getData().add(series1);
-        gematchte_koffers.getChildren().add(test2);
-    }
-    
-    private void LoadData2() {
-        
-        kosten.getChildren().clear();
-        CategoryAxis xAxis = new CategoryAxis();
-        xAxis.setLabel("Maanden");
-        NumberAxis yAxis = new NumberAxis();
-        yAxis.setLabel("Aantal");
-        BarChart test3 = new BarChart(xAxis, yAxis);
-        test3.setTitle("kosten");
-        XYChart.Series series2 = new XYChart.Series();
-        series2.setName("Aantal");
-        test3.getData().add(series2);
-        kosten.getChildren().add(test3);
-    }
-    
     @Override
     public void initialize(URL url, ResourceBundle rb) {
 
-        loadData();
-        LoadData();
-        LoadData2();
+        loadData(gevonden_koffers, "Gevonden koffers");
+        loadData(gematchte_koffers, "Gematchte koffers");
+        loadData(kosten, "Kosten");
 
         db = new MyJDBC();
         try {
@@ -104,19 +76,19 @@ public class RapportagesController implements Initializable {
 
             while (resultSet.next()) {
                 categorie.getItems().addAll(
-                        resultSet.getString("jaar")
+                        resultSet.getString("naam")
                 );
             }
-            
+
             //vul jaar combobox
             resultSet = db.executeResultSetQuery("SELECT * FROM vliegveld");
 
             while (resultSet.next()) {
                 jaar.getItems().addAll(
-                        resultSet.getString("jaar")
+                        resultSet.getString("naam")
                 );
             }
-            
+
         } catch (SQLException ex) {
             Logger.getLogger(GebruikerController.class.getName()).log(Level.SEVERE, null, ex);
         }
