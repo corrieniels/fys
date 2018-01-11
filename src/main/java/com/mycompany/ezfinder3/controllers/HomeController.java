@@ -70,6 +70,6 @@ public class HomeController implements Initializable {
 
         //verlorenBagage.setItems(null);
         verlorenBagage.setItems(data);
-
+        
     }
 }

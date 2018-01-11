@@ -34,8 +34,6 @@ public class Home {
         this.status = new SimpleStringProperty(status);
     }
 
-    
-
     public int getNummer() {
         return nummer.get();
     }

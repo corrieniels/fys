@@ -4,15 +4,12 @@
 <?import javafx.scene.control.TableColumn?>
 <?import javafx.scene.control.TableView?>
 <?import javafx.scene.control.TextField?>
-<?import javafx.scene.image.Image?>
-<?import javafx.scene.image.ImageView?>
-<?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.ColumnConstraints?>
 <?import javafx.scene.layout.GridPane?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<GridPane BorderPane.alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.ezfinder3.controllers.ManagementController">
+<GridPane BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.ezfinder3.controllers.ManagementController">
     <columnConstraints>
         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         <ColumnConstraints hgrow="SOMETIMES" maxWidth="631.0" minWidth="10.0" prefWidth="627.0" />
@@ -38,7 +35,7 @@
             <children>
                 <TextField promptText="Gebruikers zoeken" GridPane.rowIndex="2" />
                 <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="124.0" text="Zoeken" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                <Button onAction="#goGebruiker" mnemonicParsing="false" prefHeight="31.0" prefWidth="177.0" text="Gebruikers toevoegen" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                <Button mnemonicParsing="false" onAction="#goGebruiker" prefHeight="31.0" prefWidth="177.0" text="Gebruikers toevoegen" GridPane.columnIndex="2" GridPane.rowIndex="2" />
             </children>
         </GridPane>
         <TableView editable="true" prefHeight="167.0" prefWidth="447.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
@@ -47,10 +44,11 @@
                 <TableColumn prefWidth="76.0" text="Taal" />
                 <TableColumn prefWidth="83.0" text="Type" />
                 <TableColumn prefWidth="143.0" text="Actief" />
-                <TableColumn prefWidth="60.0" text=" " />
+                <TableColumn prefWidth="103.0" />
             </columns>
             <columnResizePolicy>
             </columnResizePolicy>
         </TableView>
+      <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="103.0" text="Non-Actief" />
     </children>
 </GridPane>
