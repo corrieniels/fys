@@ -38,25 +38,33 @@ public class MatchesVerlorenController implements Initializable {
     private TableColumn<MatchVerloren, String> kolomKleur;
     @FXML
     private TableColumn<MatchVerloren, String> kolomBijzonderheden;
-    
+    @FXML
+    private Button btnLoad;
 
     //initiakize observable list to hold out database date
     private ObservableList<MatchVerloren> data;
     private MyJDBC dc;
-    private ResultSet resultSet;
-   
+
+    /**
+     * Initializes the controller class.
+     * @param url
+     * @param rb
+     */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         dc = new MyJDBC();
+    }
 
-        data = FXCollections.observableArrayList();
-    
+    @FXML
+    private void loadDataFromDatabase(ActionEvent event) {
         try {
+            Connection conn = dc.Connect();
+            data = FXCollections.observableArrayList();
             //Excecute query and store results in a resultset
-            resultSet = dc.executeResultSetQuery("SELECT bijzonder, bagagenummer, kleur FROM fys.bagage;" );
-            while (resultSet.next()) {
+            ResultSet rs = conn.createStatement().executeQuery("SELECT * FROM fys.bagage;");
+            while (rs.next()) {
                 //get string from db, 
-                data.add(new MatchVerloren(resultSet.getString(1), resultSet.getString(2), resultSet.getString(3)));
+                data.add(new MatchVerloren(rs.getString(2), rs.getString(3), rs.getString(4)));
             }
 
         } catch (SQLException ex) {
@@ -73,4 +81,3 @@ public class MatchesVerlorenController implements Initializable {
         
     }
 }
-

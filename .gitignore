@@ -6,3 +6,6 @@
 /nbproject/private/
 >>>>>>> 444a4be634ba03369b8ea72fbae9bb3a8565609d
 src/main/java/com/mycompany/ezfinder3/MyJDBC.java
+target/EzFinder3-1.0-SNAPSHOT.jar
+target/maven-archiver/pom.properties
+target/maven-status/maven-compiler-plugin/compile/default-compile/inputFiles.lst

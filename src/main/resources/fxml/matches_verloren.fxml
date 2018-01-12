@@ -10,7 +10,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<GridPane BorderPane.alignment="CENTER" xmlns:fx="http://javafx.com/fxml/1" xmlns="http://javafx.com/javafx/8.0.141" fx:controller="com.mycompany.ezfinder3.controllers.MatchesVerlorenController">
+<GridPane BorderPane.alignment="CENTER" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.ezfinder3.controllers.MatchesVerlorenController">
     <columnConstraints>
         <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
         <ColumnConstraints hgrow="SOMETIMES" maxWidth="631.0" minWidth="10.0" prefWidth="627.0" />
@@ -41,13 +41,11 @@
                 </Text>
             </children>
         </GridPane>
-        <TableView editable="true" prefHeight="122.0" prefWidth="631.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <TableView fx:id="tableMatches" editable="true" prefHeight="122.0" prefWidth="631.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
             <columns>
-                <TableColumn prefWidth="128.0" text="Foto" />
-                <TableColumn prefWidth="76.0" text="Nummer" />
-                <TableColumn prefWidth="83.0" text="Kleur" />
-                <TableColumn prefWidth="143.0" text="Bijzonderheden" />
-                <TableColumn prefWidth="60.0" text=" " />
+                <TableColumn fx:id="kolomNummer" prefWidth="76.0" text="Nummer" />
+                <TableColumn fx:id="kolomKleur" prefWidth="83.0" text="Kleur" />
+                <TableColumn fx:id="kolomBijzonderheden" prefWidth="143.0" text="Bijzonderheden" />
             </columns>
             <columnResizePolicy>
             </columnResizePolicy>
