@@ -36,6 +36,8 @@ public class RapportagesController implements Initializable {
 
     private void loadData(AnchorPane ap, String titel) throws SQLException {
 
+        db = new MyJDBC();
+        
         ap.getChildren().clear();
         CategoryAxis xAxis = new CategoryAxis();
         xAxis.setLabel("Maanden");
