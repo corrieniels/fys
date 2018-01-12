@@ -14,6 +14,7 @@ import javafx.collections.ObservableList;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
+import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -26,7 +27,7 @@ public class ManagementController implements Initializable {
     private ObservableList<Management> data;
     
     @FXML
-    private TableView<Management> Gebruikertoevoegen;
+    private TableView<Management> content;
     @FXML
     private TableColumn<Management, String> kolomGebruikersnaam;
     @FXML
@@ -34,45 +35,46 @@ public class ManagementController implements Initializable {
     @FXML
     private TableColumn<Management, String> kolomType;
     @FXML
-    private TableColumn<Management, String> kolomArchief;
-    
+    private TableColumn<Management, String> kolomActief;
     @FXML
-    private void goGebruiker(ActionEvent event) throws IOException {
+    Button Actief;
+    
+   @FXML
+    private void goGebruiker(ActionEvent event) {       
         MainApp.switchScherm("fxml/gebruiker.fxml");
     }
     
     @Override
     public void initialize(URL url, ResourceBundle rb) {
         db = new MyJDBC();
-
         data = FXCollections.observableArrayList();
         
         try {
-            resultSet = db.executeResultSetQuery("SELECT * FROM medewerker WHERE gebruikersnaam");
+            resultSet = db.executeResultSetQuery("SELECT gebruikersnaam, taal, rol_id, actief FROM medewerker");
             while (resultSet.next()) {
-                data.add(new Management(resultSet.getString(1), resultSet.getString(2), resultSet.getString(3), resultSet.getString(4)));
-                //resultSet.getString(1), resultSet.getString(2), resultSet.getString(3), resultSet.getString(4)
 
+                data.add(   
+                    new Management(
+                            resultSet.getString("gebruikersnaam"),
+                            resultSet.getString("taal"),
+                            resultSet.getString("rol_id"),
+                            resultSet.getString("actief")
+                    )
+                );
+                //resultSet.getString(1), resultSet.getString(2), resultSet.getString(3), resultSet.getString(4)
             }
 
         } catch (SQLException ex) {
             System.err.println("Error" + ex);
         }
-
-        kolomGebruikersnaam.setCellValueFactory(new PropertyValueFactory<Management, String>("gebruikersnaam"));
-        kolomTaal.setCellValueFactory(new PropertyValueFactory<Management, String>("taal"));
-        kolomType.setCellValueFactory(new PropertyValueFactory<Management, String>("type"));
-        kolomArchief.setCellValueFactory(new PropertyValueFactory<Management, String>("archief"));
         
-//        kolomGebruikersnaam.setCellValueFactory(new PropertyValueFactory<Management, String>("gebruikersnaam"));
-//        kolomTaal.setCellValueFactory(new PropertyValueFactory<Management, String>("Taal"));
-//        kolomType.setCellValueFactory(new PropertyValueFactory<Management, String>("Type"));
-//        kolomArchief.setCellValueFactory(new PropertyValueFactory<Management, String>("Archief"));
+          kolomGebruikersnaam.setCellValueFactory(new PropertyValueFactory<Management,String>("gebruikersnaam"));
+          kolomTaal.setCellValueFactory(new PropertyValueFactory<Management,String>("taal"));
+          kolomType.setCellValueFactory(new PropertyValueFactory<Management,String>("type"));
+          kolomActief.setCellValueFactory(new PropertyValueFactory<Management,String>("archief"));
         
-        Gebruikertoevoegen.setItems(null);
-        Gebruikertoevoegen.setItems(data);
-        
-        
-        
+          content.setItems(data);
+          
     }
+
 }

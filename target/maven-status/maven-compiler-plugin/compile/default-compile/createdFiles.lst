@@ -7,6 +7,7 @@ com\mycompany\ezfinder3\controllers\DataoverGevondenBagageController.class
 com\mycompany\ezfinder3\MainApp.class
 com\mycompany\ezfinder3\Management.class
 com\mycompany\ezfinder3\controllers\MatchesGevondenController.class
+com\mycompany\ezfinder3\GevondenMatches.class
 com\mycompany\ezfinder3\controllers\GevondenController.class
 com\mycompany\ezfinder3\User.class
 com\mycompany\ezfinder3\controllers\HomeController.class

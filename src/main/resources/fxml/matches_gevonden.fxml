@@ -41,7 +41,7 @@
                 </Text>
             </children>
         </GridPane>
-        <TableView id="matchesGevonden" editable="true" prefHeight="122.0" prefWidth="631.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <TableView id="matchesGevonden" fx:id="matchesGevonden" editable="true" prefHeight="122.0" prefWidth="631.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
             <columns>
                 <TableColumn fx:id="Nummer" prefWidth="93.0" text="Nummer" />
                 <TableColumn fx:id="Kleur" prefWidth="68.0" text="Kleur" />

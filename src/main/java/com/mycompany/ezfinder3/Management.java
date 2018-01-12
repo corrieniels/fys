@@ -19,13 +19,13 @@ public class Management {
     private final StringProperty gebruikersnaam;
     private final StringProperty taal;
     private final StringProperty type;
-    private final StringProperty archief;
+    private final StringProperty actief;
     //Constructors
-    public Management(String gebruikersnaam, String taal, String type, String archief) {
+    public Management(String gebruikersnaam, String taal, String type, String actief) {
         this.gebruikersnaam = new SimpleStringProperty(gebruikersnaam);
         this.taal = new SimpleStringProperty(taal);
         this.type = new SimpleStringProperty(type);
-        this.archief = new SimpleStringProperty(archief);
+        this.actief = new SimpleStringProperty(actief);
     }
     //getters
     public String getGebruikersnaam() {
@@ -41,7 +41,7 @@ public class Management {
     }
 
     public String getArchief() {
-        return archief.get();
+        return actief.get();
     }
 
     //setters
@@ -58,7 +58,7 @@ public class Management {
     }
 
     public void setArchief(String value) {
-        archief.set(value);
+        actief.set(value);
     }
     //Property values
     public StringProperty gebruikersnaamProperty() {
@@ -74,7 +74,7 @@ public class Management {
     }
 
     public StringProperty archiefProperty() {
-        return archief;
+        return actief;
     }
 
 }

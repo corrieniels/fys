@@ -38,17 +38,17 @@
                 <Button mnemonicParsing="false" onAction="#goGebruiker" prefHeight="31.0" prefWidth="177.0" text="Gebruikers toevoegen" GridPane.columnIndex="2" GridPane.rowIndex="2" />
             </children>
         </GridPane>
-        <TableView editable="true" prefHeight="167.0" prefWidth="447.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <TableView fx:id="content" editable="true" prefHeight="167.0" prefWidth="447.0" GridPane.columnIndex="1" GridPane.rowIndex="1">
             <columns>
-                <TableColumn prefWidth="128.0" text="Gebruikersnaam" />
-                <TableColumn prefWidth="76.0" text="Taal" />
-                <TableColumn prefWidth="83.0" text="Type" />
-                <TableColumn prefWidth="143.0" text="Actief" />
+                <TableColumn fx:id="kolomGebruikersnaam" prefWidth="128.0" text="Gebruikersnaam" />
+                <TableColumn fx:id="kolomTaal" prefWidth="76.0" text="Taal" />
+                <TableColumn fx:id="kolomType" prefWidth="83.0" text="Type" />
+                <TableColumn fx:id="kolomActief" prefWidth="143.0" text="Actief" />
                 <TableColumn prefWidth="103.0" />
             </columns>
             <columnResizePolicy>
             </columnResizePolicy>
         </TableView>
-      <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="103.0" text="Non-Actief" />
+      <Button fx:id="Actief" mnemonicParsing="false" prefHeight="31.0" prefWidth="103.0" text="Non-Actief" />
     </children>
 </GridPane>
