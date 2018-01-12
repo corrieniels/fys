@@ -32,6 +32,7 @@ public class LoginController implements Initializable {
         ResultSet resultSet = db.executeResultSetQuery("SELECT * FROM medewerker WHERE gebruikersnaam = '"+user+"' AND wachtwoord = '"+pass+"'");
         
         int id = 0;
+       
         int role = 0;
         
         while ( resultSet.next() ){

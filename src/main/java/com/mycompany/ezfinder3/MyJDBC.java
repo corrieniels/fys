@@ -13,10 +13,16 @@ public class MyJDBC {
     private static final String DB_DEFAULT_SERVER_URL = "localhost";
     
     private static final String DB_DEFAULT_ACCOUNT = "root";
+<<<<<<< HEAD
     private static final String DB_DEFAULT_PASSWORD = "admin";
 
 
     
+=======
+
+
+        
+>>>>>>> c17121b27484356908a9764dd9c7adc909221711
     private final static String DB_DRIVER_URL = "com.mysql.jdbc.Driver";
     private final static String DB_DRIVER_PREFIX = "jdbc:mysql://";
     private final static String DB_DRIVER_PARAMETERS = "?useSSL=false";
