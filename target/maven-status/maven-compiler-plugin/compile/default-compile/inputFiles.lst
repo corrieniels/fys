@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\yassi\OneDrive\Documenten\GitHub\fys\src\main\java\com\mycompany\ezfinder3\controllers\GebruikerController.java
 C:\Users\yassi\OneDrive\Documenten\GitHub\fys\src\main\java\com\mycompany\ezfinder3\Management.java
 C:\Users\yassi\OneDrive\Documenten\GitHub\fys\src\main\java\com\mycompany\ezfinder3\User.java
@@ -17,3 +18,17 @@ C:\Users\yassi\OneDrive\Documenten\GitHub\fys\src\main\java\com\mycompany\ezfind
 C:\Users\yassi\OneDrive\Documenten\GitHub\fys\src\main\java\com\mycompany\ezfinder3\controllers\data.java
 C:\Users\yassi\OneDrive\Documenten\GitHub\fys\src\main\java\com\mycompany\ezfinder3\controllers\MatchesGevondenController.java
 C:\Users\yassi\OneDrive\Documenten\GitHub\fys\src\main\java\com\mycompany\ezfinder3\controllers\MenuController.java
+=======
+C:\Users\jsdav\Documents\GitHub\fys\src\main\java\com\mycompany\ezfinder3\controllers\HomeController.java
+C:\Users\jsdav\Documents\GitHub\fys\src\main\java\com\mycompany\ezfinder3\controllers\ManagementController.java
+C:\Users\jsdav\Documents\GitHub\fys\src\main\java\com\mycompany\ezfinder3\controllers\VerlorenController.java
+C:\Users\jsdav\Documents\GitHub\fys\src\main\java\com\mycompany\ezfinder3\MyJDBC.java
+C:\Users\jsdav\Documents\GitHub\fys\src\main\java\com\mycompany\ezfinder3\controllers\GevondenController.java
+C:\Users\jsdav\Documents\GitHub\fys\src\main\java\com\mycompany\ezfinder3\controllers\MatchesVerlorenController.java
+C:\Users\jsdav\Documents\GitHub\fys\src\main\java\com\mycompany\ezfinder3\controllers\RapportagesController.java
+C:\Users\jsdav\Documents\GitHub\fys\src\main\java\com\mycompany\ezfinder3\MainApp.java
+C:\Users\jsdav\Documents\GitHub\fys\src\main\java\com\mycompany\ezfinder3\User.java
+C:\Users\jsdav\Documents\GitHub\fys\src\main\java\com\mycompany\ezfinder3\controllers\MatchesGevondenController.java
+C:\Users\jsdav\Documents\GitHub\fys\src\main\java\com\mycompany\ezfinder3\controllers\LoginController.java
+C:\Users\jsdav\Documents\GitHub\fys\src\main\java\com\mycompany\ezfinder3\controllers\MenuController.java
+>>>>>>> 68b1c54d5c38840f720d0b70f35fc46768943123
