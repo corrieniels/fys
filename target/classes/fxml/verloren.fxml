@@ -40,42 +40,42 @@
                 <Insets left="20.0" />
             </GridPane.margin>
         </Text>
-        <TextField fx:id="bagagenummer" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="Nummer" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
+        <TextField fx:id="bagagenummer" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" promptText="Nummer" stylesheets="@../styles/style.css" GridPane.halignment="RIGHT" GridPane.rowIndex="1">
             <GridPane.margin>
                 <Insets right="20.0" />
             </GridPane.margin>
         </TextField>
-        <TextField fx:id="voornaam" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="Voornaam" GridPane.columnIndex="1" GridPane.rowIndex="1">
+        <TextField fx:id="voornaam" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" promptText="Voornaam" stylesheets="@../styles/style.css" GridPane.columnIndex="1" GridPane.rowIndex="1">
             <GridPane.margin>
                 <Insets left="20.0" />
             </GridPane.margin>
         </TextField>
-        <TextField fx:id="kleur" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="Kleur" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
+        <TextField fx:id="kleur" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" promptText="Kleur bv. Rood" stylesheets="@../styles/style.css" GridPane.halignment="RIGHT" GridPane.rowIndex="2">
             <GridPane.margin>
                 <Insets right="20.0" />
             </GridPane.margin>
         </TextField>
-        <TextField fx:id="tussenvoegsel" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="tussenvoegsel" GridPane.columnIndex="1" GridPane.rowIndex="2">
+        <TextField fx:id="tussenvoegsel" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" promptText="tussenvoegsel" stylesheets="@../styles/style.css" GridPane.columnIndex="1" GridPane.rowIndex="2">
             <GridPane.margin>
                 <Insets left="20.0" />
             </GridPane.margin>
         </TextField>
-        <TextField fx:id="achternaam" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="Achternaam" GridPane.columnIndex="1" GridPane.rowIndex="3">
+        <TextField fx:id="achternaam" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" promptText="Achternaam" stylesheets="@../styles/style.css" GridPane.columnIndex="1" GridPane.rowIndex="3">
             <GridPane.margin>
                 <Insets left="20.0" />
             </GridPane.margin>
         </TextField>
-        <TextField fx:id="email" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="Email" GridPane.columnIndex="1" GridPane.rowIndex="4">
+        <TextField fx:id="email" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" promptText="Email" stylesheets="@../styles/style.css" GridPane.columnIndex="1" GridPane.rowIndex="4">
             <GridPane.margin>
                 <Insets left="20.0" />
             </GridPane.margin>
         </TextField>
-        <TextField fx:id="telefoon" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="Telefoonnummer" GridPane.columnIndex="1" GridPane.rowIndex="5">
+        <TextField fx:id="telefoon" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" promptText="Telefoonnummer" stylesheets="@../styles/style.css" GridPane.columnIndex="1" GridPane.rowIndex="5">
             <GridPane.margin>
                 <Insets left="20.0" />
             </GridPane.margin>
         </TextField>
-        <TextField fx:id="bijzonder" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" text="Bijzonderheden" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
+        <TextField fx:id="bijzonder" maxWidth="200.0" minWidth="200.0" prefWidth="200.0" promptText="Bijzonderheden" stylesheets="@../styles/style.css" GridPane.halignment="RIGHT" GridPane.rowIndex="3" GridPane.valignment="CENTER">
             <GridPane.margin>
                 <Insets right="20.0" />
             </GridPane.margin>

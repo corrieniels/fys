@@ -50,14 +50,18 @@ public class ManagementController implements Initializable {
         data = FXCollections.observableArrayList();
         
         try {
-            resultSet = db.executeResultSetQuery("SELECT gebruikersnaam, taal, rol_id, actief FROM medewerker");
+            resultSet = db.executeResultSetQuery("SELECT m.gebruikersnaam, "
+                    + "t.naam as taal, r.naam as rol, (CASE WHEN m.actief <> 0 "
+                    + "THEN 'ja' ELSE 'nee' END) as actief FROM medewerker m "
+                    + "INNER JOIN taal t ON m.taal = t.id INNER JOIN rol r ON "
+                    + "m.rol_id = r.id");
             while (resultSet.next()) {
 
                 data.add(   
                     new Management(
                             resultSet.getString("gebruikersnaam"),
                             resultSet.getString("taal"),
-                            resultSet.getString("rol_id"),
+                            resultSet.getString("rol"),
                             resultSet.getString("actief")
                     )
                 );
