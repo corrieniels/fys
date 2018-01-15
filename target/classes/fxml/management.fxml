@@ -33,8 +33,8 @@
                 <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
             </rowConstraints>
             <children>
-                <TextField promptText="Gebruikers zoeken" GridPane.rowIndex="2" />
-                <Button mnemonicParsing="false" prefHeight="31.0" prefWidth="124.0" text="Zoeken" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                <TextField fx:id="Gebruikerszoeken" promptText="Gebruikers zoeken" GridPane.rowIndex="2" />
+                <Button mnemonicParsing="false" onAction="#zoekbutton" prefHeight="31.0" prefWidth="124.0" text="Zoeken" GridPane.columnIndex="1" GridPane.rowIndex="2" />
                 <Button mnemonicParsing="false" onAction="#goGebruiker" prefHeight="31.0" prefWidth="177.0" text="Gebruikers toevoegen" GridPane.columnIndex="2" GridPane.rowIndex="2" />
             </children>
         </GridPane>
