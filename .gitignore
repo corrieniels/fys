@@ -6,3 +6,4 @@
 /nbproject/private/
 >>>>>>> 444a4be634ba03369b8ea72fbae9bb3a8565609d
 src/main/java/com/mycompany/ezfinder3/MyJDBC.java
+target/maven-archiver/pom.properties

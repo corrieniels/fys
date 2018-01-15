@@ -49,6 +49,6 @@
             <columnResizePolicy>
             </columnResizePolicy>
         </TableView>
-      <Button fx:id="Actief" mnemonicParsing="false" prefHeight="31.0" prefWidth="103.0" text="Non-Actief" />
+      <Button fx:id="Delete" mnemonicParsing="false" prefHeight="31.0" prefWidth="103.0" text="Verwijder" />
     </children>
 </GridPane>

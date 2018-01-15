@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\corni\Documents\GitHub\fys\src\main\java\com\mycompany\ezfinder3\MainApp.java
 C:\Users\corni\Documents\GitHub\fys\src\main\java\com\mycompany\ezfinder3\controllers\LoginController.java
 C:\Users\corni\Documents\GitHub\fys\src\main\java\com\mycompany\ezfinder3\controllers\RapportagesController.java
@@ -17,3 +18,24 @@ C:\Users\corni\Documents\GitHub\fys\src\main\java\com\mycompany\ezfinder3\contro
 C:\Users\corni\Documents\GitHub\fys\src\main\java\com\mycompany\ezfinder3\controllers\HomeController.java
 C:\Users\corni\Documents\GitHub\fys\src\main\java\com\mycompany\ezfinder3\controllers\MatchesGevondenController.java
 C:\Users\corni\Documents\GitHub\fys\src\main\java\com\mycompany\ezfinder3\controllers\MatchesVerlorenController.java
+=======
+C:\Users\yassi\OneDrive\Documenten\GitHub\fys\src\main\java\com\mycompany\ezfinder3\controllers\GebruikerController.java
+C:\Users\yassi\OneDrive\Documenten\GitHub\fys\src\main\java\com\mycompany\ezfinder3\Management.java
+C:\Users\yassi\OneDrive\Documenten\GitHub\fys\src\main\java\com\mycompany\ezfinder3\User.java
+C:\Users\yassi\OneDrive\Documenten\GitHub\fys\src\main\java\com\mycompany\ezfinder3\controllers\DataoverGevondenBagageController.java
+C:\Users\yassi\OneDrive\Documenten\GitHub\fys\src\main\java\com\mycompany\ezfinder3\Home.java
+C:\Users\yassi\OneDrive\Documenten\GitHub\fys\src\main\java\com\mycompany\ezfinder3\controllers\VerlorenController.java
+C:\Users\yassi\OneDrive\Documenten\GitHub\fys\src\main\java\com\mycompany\ezfinder3\controllers\LoginController.java
+C:\Users\yassi\OneDrive\Documenten\GitHub\fys\src\main\java\com\mycompany\ezfinder3\controllers\MatchesVerlorenController.java
+C:\Users\yassi\OneDrive\Documenten\GitHub\fys\src\main\java\com\mycompany\ezfinder3\controllers\pieChartGevondenBagage.java
+C:\Users\yassi\OneDrive\Documenten\GitHub\fys\src\main\java\com\mycompany\ezfinder3\controllers\ManagementController.java
+C:\Users\yassi\OneDrive\Documenten\GitHub\fys\src\main\java\com\mycompany\ezfinder3\controllers\RapportagesController.java
+C:\Users\yassi\OneDrive\Documenten\GitHub\fys\src\main\java\com\mycompany\ezfinder3\MainApp.java
+C:\Users\yassi\OneDrive\Documenten\GitHub\fys\src\main\java\com\mycompany\ezfinder3\controllers\HomeController.java
+C:\Users\yassi\OneDrive\Documenten\GitHub\fys\src\main\java\com\mycompany\ezfinder3\controllers\GevondenController.java
+C:\Users\yassi\OneDrive\Documenten\GitHub\fys\src\main\java\com\mycompany\ezfinder3\MyJDBC.java
+C:\Users\yassi\OneDrive\Documenten\GitHub\fys\src\main\java\com\mycompany\ezfinder3\GevondenMatches.java
+C:\Users\yassi\OneDrive\Documenten\GitHub\fys\src\main\java\com\mycompany\ezfinder3\controllers\data.java
+C:\Users\yassi\OneDrive\Documenten\GitHub\fys\src\main\java\com\mycompany\ezfinder3\controllers\MatchesGevondenController.java
+C:\Users\yassi\OneDrive\Documenten\GitHub\fys\src\main\java\com\mycompany\ezfinder3\controllers\MenuController.java
+>>>>>>> 7ef27c3333e0c9d4d1505058306d38cfe524713f
