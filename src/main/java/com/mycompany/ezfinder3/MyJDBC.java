@@ -14,6 +14,8 @@ public class MyJDBC {
     
     private static final String DB_DEFAULT_ACCOUNT = "root";
 
+    private static final String DB_DEFAULT_PASSWORD = "Bouajoen33?!";
+
 
         
     private final static String DB_DRIVER_URL = "com.mysql.jdbc.Driver";
