@@ -11,15 +11,9 @@ public class MyJDBC {
 
     private static final String DB_DEFAULT_DATABASE = "fys";
     private static final String DB_DEFAULT_SERVER_URL = "localhost";
-    
     private static final String DB_DEFAULT_ACCOUNT = "root";
-
-   
-
-    private static final String DB_DEFAULT_PASSWORD = "Bouajoen33?!";
-
-
-        
+    private static final String DB_DEFAULT_PASSWORD = "";
+    
     private final static String DB_DRIVER_URL = "com.mysql.jdbc.Driver";
     private final static String DB_DRIVER_PREFIX = "jdbc:mysql://";
     private final static String DB_DRIVER_PARAMETERS = "?useSSL=false";
@@ -73,13 +67,13 @@ public class MyJDBC {
             // db has been closed earlier already
             return;
         }
-        try {
-            this.connection.close();
-            this.connection = null;
-            this.log("Data base has been closed");
-        } catch (SQLException eSQL) {
-            error(eSQL);
-        }
+//        try {
+//            this.connection.close();
+//            this.connection = null;
+//            this.log("Data base has been closed");
+//        } catch (SQLException eSQL) {
+//            error(eSQL);
+//        }
     }
    
     /***
@@ -141,6 +135,29 @@ public class MyJDBC {
         ResultSet rs = s.executeQuery(sql);
         // cannot close the statement, because that also closes the resultset
         return rs;
+    }
+    
+    public int executeUpdateQueryReturnID(String sql) {
+        try {
+            Statement s = this.connection.createStatement();
+            log(sql);
+            s.executeUpdate(sql, Statement.RETURN_GENERATED_KEYS);
+            ResultSet n = s.getGeneratedKeys();
+            
+            if (n.next()){
+                int id = n.getInt(1);
+                s.close();
+                return (id);
+            }else{
+                return -1;
+            }
+            
+            
+        } catch (SQLException ex) {
+            // handle exception
+            error(ex);
+            return -1;
+        }
     }
     
     /***
