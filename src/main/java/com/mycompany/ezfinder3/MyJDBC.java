@@ -11,18 +11,9 @@ public class MyJDBC {
 
     private static final String DB_DEFAULT_DATABASE = "fys";
     private static final String DB_DEFAULT_SERVER_URL = "localhost";
-    
     private static final String DB_DEFAULT_ACCOUNT = "root";
-<<<<<<< HEAD
-    private static final String DB_DEFAULT_PASSWORD = "admin";
-
-
+    private static final String DB_DEFAULT_PASSWORD = "";
     
-=======
-
-
-        
->>>>>>> c17121b27484356908a9764dd9c7adc909221711
     private final static String DB_DRIVER_URL = "com.mysql.jdbc.Driver";
     private final static String DB_DRIVER_PREFIX = "jdbc:mysql://";
     private final static String DB_DRIVER_PARAMETERS = "?useSSL=false";
@@ -76,13 +67,13 @@ public class MyJDBC {
             // db has been closed earlier already
             return;
         }
-        try {
-            this.connection.close();
-            this.connection = null;
-            this.log("Data base has been closed");
-        } catch (SQLException eSQL) {
-            error(eSQL);
-        }
+//        try {
+//            this.connection.close();
+//            this.connection = null;
+//            this.log("Data base has been closed");
+//        } catch (SQLException eSQL) {
+//            error(eSQL);
+//        }
     }
    
     /***
