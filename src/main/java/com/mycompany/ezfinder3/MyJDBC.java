@@ -137,6 +137,29 @@ public class MyJDBC {
         return rs;
     }
     
+    public int executeUpdateQueryReturnID(String sql) {
+        try {
+            Statement s = this.connection.createStatement();
+            log(sql);
+            s.executeUpdate(sql, Statement.RETURN_GENERATED_KEYS);
+            ResultSet n = s.getGeneratedKeys();
+            
+            if (n.next()){
+                int id = n.getInt(1);
+                s.close();
+                return (id);
+            }else{
+                return -1;
+            }
+            
+            
+        } catch (SQLException ex) {
+            // handle exception
+            error(ex);
+            return -1;
+        }
+    }
+    
     /***
      * Executes query that is expected to return a single String value
      * @param sql   the full sql text of the query.       

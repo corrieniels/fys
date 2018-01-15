@@ -54,7 +54,8 @@
             <columnResizePolicy>
       </columnResizePolicy>
         </TableView>
-        <Button minWidth="200.0" mnemonicParsing="false" prefHeight="18.0" prefWidth="200.0" text="Verder" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
-      <Label fx:id="label" alignment="CENTER" prefHeight="17.0" prefWidth="480.0" textAlignment="CENTER" textFill="RED" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+        <Button onAction="#terug" minWidth="200.0" mnemonicParsing="false" text="Terug" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="4" />
+        <Label fx:id="label" alignment="CENTER" prefHeight="17.0" prefWidth="480.0" textAlignment="CENTER" textFill="RED" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+        <Button onAction="#match" alignment="CENTER" minWidth="200.0" mnemonicParsing="false" text="Match" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="3" />
     </children>
 </GridPane>

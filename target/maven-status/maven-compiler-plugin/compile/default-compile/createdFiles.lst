@@ -1,9 +1,7 @@
 com\mycompany\ezfinder3\controllers\VerlorenController.class
-com\mycompany\ezfinder3\controllers\data.class
+com\mycompany\ezfinder3\VerlorenMatches.class
 com\mycompany\ezfinder3\MyJDBC.class
-com\mycompany\ezfinder3\controllers\pieChartGevondenBagage.class
 com\mycompany\ezfinder3\controllers\LoginController.class
-com\mycompany\ezfinder3\controllers\DataoverGevondenBagageController.class
 com\mycompany\ezfinder3\MainApp.class
 com\mycompany\ezfinder3\Management.class
 com\mycompany\ezfinder3\controllers\MatchesGevondenController.class

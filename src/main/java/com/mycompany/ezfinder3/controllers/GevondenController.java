@@ -49,11 +49,7 @@ public class GevondenController implements Initializable {
         while ( resultSet.next() ){
             colorId = resultSet.getInt("code");
         }
-        System.out.println(colorId);
-                
-        // voer bagage in in database
-       // db.executeUpdateQuery("INSERT INTO `bagage` (`bagagenummer`, `vliegveld_id`, `kleur`, `foto`, `kosten`, `bijzonder`, `klant_id`) VALUES ('"+num+"', '"+vliegId+"', '"+colorId+"', '', '0', '"+bijzonder+"', '0')");
-        
+
         // geef gegevens door naar matchescontroller
         MatchesGevondenController.setID(intNum);
         MatchesGevondenController.setVlieg(vliegId);
@@ -96,5 +92,5 @@ public class GevondenController implements Initializable {
         }
         
     }
-    }
+}
 

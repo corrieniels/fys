@@ -1,8 +1,10 @@
 package com.mycompany.ezfinder3.controllers;
 
 import com.mycompany.ezfinder3.GevondenMatches;
+import com.mycompany.ezfinder3.MainApp;
 import static com.mycompany.ezfinder3.MainApp.db;
 import com.mycompany.ezfinder3.MyJDBC;
+import java.io.IOException;
 import java.net.URL;
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -11,6 +13,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
+import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Label;
@@ -45,6 +48,17 @@ public class MatchesGevondenController implements Initializable {
     public static int getKleur(){ return kleur; }
     public static void setVlieg(int newVlieg){ vlieg = newVlieg; }
     public static int getVlieg(){ return vlieg; }
+    
+    @FXML
+    private void terug(ActionEvent event) throws IOException, SQLException {
+        MainApp.switchScherm("fxml/gevonden.fxml");
+    }
+    
+    @FXML
+    private void match(ActionEvent event) throws IOException, SQLException {
+        db.executeUpdateQuery("INSERT INTO `bagagestatus` (`id`, `bagagenummer`, `status`, `datum`) VALUES (NULL, '"+getID()+"', '2', NOW()) ");
+        MainApp.switchScherm("fxml/verloren.fxml");
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
