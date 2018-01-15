@@ -30,6 +30,7 @@ public class GevondenController implements Initializable {
         // vraag gegevens op uit formulier
         String bijzonder = bijzonderheden.getText();
         String num = nummer.getText();
+        int intNum = Integer.parseInt(num);
         String color = kleur.getSelectionModel().getSelectedItem().toString();
         String vlieg = vliegveld.getSelectionModel().getSelectedItem().toString();
 
@@ -52,6 +53,9 @@ public class GevondenController implements Initializable {
                 
         // voer bagage in in database
         db.executeUpdateQuery("INSERT INTO `bagage` (`bagagenummer`, `vliegveld_id`, `kleur`, `foto`, `kosten`, `bijzonder`, `klant_id`) VALUES ('"+num+"', '"+vliegId+"', '"+colorId+"', '', '0', '"+bijzonder+"', '0')");
+        
+        // geef id door naar matchescontroller
+        MatchesGevondenController.setLastInsertedID(intNum);
         
         // ga naar matches scherm
         MainApp.switchScherm("fxml/matches_gevonden.fxml");

@@ -14,6 +14,8 @@ public class MyJDBC {
     
     private static final String DB_DEFAULT_ACCOUNT = "root";
 
+   
+
     private static final String DB_DEFAULT_PASSWORD = "Bouajoen33?!";
 
 

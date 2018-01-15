@@ -22,6 +22,7 @@ public class MatchesGevondenController implements Initializable {
     private MyJDBC db;
     private ResultSet resultSet;
     private ObservableList<GevondenMatches> data;
+    private static int lastInsertedID;
 
     @FXML
     private TableView<GevondenMatches> matchesGevonden;
@@ -35,6 +36,14 @@ public class MatchesGevondenController implements Initializable {
     private TableColumn<GevondenMatches, String> Naam;
     @FXML
     private TableColumn<GevondenMatches, String> Telefoonnummer;
+    
+    public static void setLastInsertedID(int id){
+        lastInsertedID = id;
+    }
+    
+    public static int getLastInsertedID(){
+        return lastInsertedID;
+    }
 
     @Override
     public void initialize(URL url, ResourceBundle rb) {
@@ -43,12 +52,15 @@ public class MatchesGevondenController implements Initializable {
             db = new MyJDBC();
             data = FXCollections.observableArrayList();
 
-            resultSet = db.executeResultSetQuery("SELECT \n"
-                    + "    bagagenummer, kleur, bijzonder, CONCAT(voornaam, \" \", achternaam) AS naam , telefoon \n"
-                    + "FROM\n"
-                    + "    klant,\n"
-                    + "    bagage\n"
-                    + "    ");
+            resultSet = db.executeResultSetQuery("SELECT \n" +
+                "    b.bagagenummer, b.kleur, b.bijzonder, CONCAT(k.voornaam, \" \", k.achternaam) AS naam , k.telefoon \n" +
+                "    FROM\n" +
+                "    bagage b\n" +
+                "    LEFT JOIN \n" +
+                "    klant k\n" +
+                "    ON\n" +
+                "    b.klant_id = k.id\n" +
+                "    WHERE b.bagagenummer = "+getLastInsertedID());
             while (resultSet.next()) {
 
                 data.add(new GevondenMatches(resultSet.getInt(1), resultSet.getString(2), resultSet.getString(3), resultSet.getString(4), resultSet.getString(5)));
