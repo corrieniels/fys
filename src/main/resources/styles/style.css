@@ -13,3 +13,6 @@
     -fx-border-width: 0 0 1 0; 
     -fx-background-color: #00cccc;
 }
+.root{
+    -fx-font-size: 12px;
+}
