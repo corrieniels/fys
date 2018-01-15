@@ -5,7 +5,6 @@ com\mycompany\ezfinder3\controllers\LoginController.class
 com\mycompany\ezfinder3\MainApp.class
 com\mycompany\ezfinder3\MatchVerloren.class
 com\mycompany\ezfinder3\controllers\MatchesGevondenController.class
-com\mycompany\ezfinder3\MatchConnect.class
 com\mycompany\ezfinder3\controllers\GevondenController.class
 com\mycompany\ezfinder3\User.class
 com\mycompany\ezfinder3\controllers\HomeController.class

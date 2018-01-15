@@ -1,23 +1,15 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package com.mycompany.ezfinder3.controllers;
 
 import com.mycompany.ezfinder3.MatchVerloren;
 import com.mycompany.ezfinder3.MyJDBC;
 import java.net.URL;
-import java.sql.Connection;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ResourceBundle;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
-import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.control.Button;
 import javafx.scene.control.TableColumn;
 import javafx.scene.control.TableView;
 import javafx.scene.control.cell.PropertyValueFactory;
@@ -56,7 +48,7 @@ public class MatchesVerlorenController implements Initializable {
             resultSet = dc.executeResultSetQuery("SELECT bijzonder, bagagenummer, kleur FROM fys.bagage;" );
             while (resultSet.next()) {
                 //get string from db, 
-                data.add(new MatchVerloren(resultSet.getString(1), resultSet.getString(2), resultSet.getString(3)));
+                data.add(new MatchVerloren(resultSet.getString(2), resultSet.getString(3), resultSet.getString(1)));
             }
 
         } catch (SQLException ex) {
